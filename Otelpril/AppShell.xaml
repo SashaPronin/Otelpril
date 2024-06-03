@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Otelpril.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Otelpril"
+    Shell.FlyoutBehavior="Disabled"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:pages="clr-namespace:Otelpril.Pages"
+    Shell.TabBarBackgroundColor="{StaticResource Mid}"
+    Title="Otelpril">
+
+    <Shell.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}"/>
+    </Shell.Behaviors>
+
+    <!--ShellContent
+        Title="Otel-recreation"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+    <TabBar>
+        <ShellContent Title="Поиск"
+                      Icon="dotnet_bot"
+                      ContentTemplate="{DataTemplate pages:SearchPage1}"
+                      Route="SearchPage1"/>
+        
+        <ShellContent Title="Поездки"
+                      Icon="dotnet_bot"
+                      ContentTemplate="{DataTemplate pages:TripsPage1}"
+                      Route="TripsPage1"/>
+        
+        <ShellContent Title="Избранное"
+                      Icon="dotnet_bot"
+                      ContentTemplate="{DataTemplate pages:CategriesPage}"
+                      Route="CategriesPage"/>
+        
+        <ShellContent Title="Профиль"
+                      Icon="dotnet_bot"
+                      ContentTemplate="{DataTemplate pages:ProfilePage}"
+                      Route="ProfilePage"/>
+        
+        <ShellContent Title="Помощь"
+                      Icon="bx-cross"
+                      ContentTemplate="{DataTemplate pages:HelpPage}"
+                      Route="HelpPage"/>
+    </TabBar>
+</Shell>
