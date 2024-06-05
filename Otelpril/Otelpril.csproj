@@ -62,10 +62,11 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.40" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.40" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Paket.Core" Version="8.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\favoritesPage.xaml.cs">
+		<Compile Update="Pages\favoritesPage.xaml.cs">
 	    <DependentUpon>FavoritesPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Pages\reservationPage.xaml.cs">
@@ -74,16 +75,21 @@
 	  <Compile Update="Pages\SearchPage.xaml.cs">
 	    <DependentUpon>SearchPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\TripsPage.xaml.cs">
-	    <DependentUpon>TripsPage.xaml</DependentUpon>
-	  </Compile>
 	</ItemGroup>
-
 	<ItemGroup>
-	  <MauiXaml Update="Pages\FavoritesPage.xaml">
+	  <MauiXaml Update="Pages\FavoritesPage1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\HelpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ListingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\LoadingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ProfilePage.xaml">
@@ -95,9 +101,12 @@
 	  <MauiXaml Update="Pages\SearchPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\TripsPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Help\" />
+	  <Folder Include="ModelsSearch\" />
+	  <Folder Include="Properties\Profile\" />
 	</ItemGroup>
 
 </Project>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otelpril.Models
 {
-    public class Trips
+    public class Search
     {
         public short Id { get; set; }
         public string Name { get; set; }
@@ -22,9 +22,9 @@ namespace Otelpril.Models
         public string Name { set; get; }
         public string Image { get; set; }
         public decimal Price { get; set; }
-        public short Trips {  get; set; }
+        public short Trips { get; set; }
         public string TripsName { get; set; }
-       
+
     }
 
     public class CartItem
@@ -36,6 +36,8 @@ namespace Otelpril.Models
 
         public decimal Price { get; set; }
         public short Quantity { get; set; }
-        public decimal Amount => Price * Quantity;
+       
     }
+
+
 }

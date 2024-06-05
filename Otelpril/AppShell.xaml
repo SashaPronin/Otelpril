@@ -4,11 +4,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Otelpril"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:pages="clr-namespace:Otelpril.Pages"
     Shell.TabBarBackgroundColor="{StaticResource Mid}"
     Title="Otelpril">
+    
+    
 
     <Shell.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}"/>
@@ -18,24 +20,34 @@
         Title="Otel-recreation"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />-->
+    
+        <ShellContent Title="Загрузка"
+                   ContentTemplate="{DataTemplate pages:LoadingPage}"
+                   Route="LoadingPage"
+                   Shell.FlyoutBehavior="Disabled"
+                   Shell.FlyoutItemIsVisible="False"/>
+
+        <ShellContent Title="Логин"
+                   ContentTemplate="{DataTemplate pages:LoginPage}"
+                   Route="LoginPage"
+                   Shell.FlyoutBehavior="Disabled"
+                   Shell.FlyoutItemIsVisible="False"/>
+    
     <TabBar>
+
         <ShellContent Title="Поиск"
-                      Icon="dotnet_bot"
-                      ContentTemplate="{DataTemplate pages:SearchPage1}"
+                      Icon="bxs-search-alt-2"
+                      ContentTemplate="{DataTemplate pages:SearchPage1}" 
                       Route="SearchPage1"/>
-        
-        <ShellContent Title="Поездки"
-                      Icon="dotnet_bot"
-                      ContentTemplate="{DataTemplate pages:TripsPage1}"
-                      Route="TripsPage1"/>
+       
         
         <ShellContent Title="Избранное"
-                      Icon="dotnet_bot"
-                      ContentTemplate="{DataTemplate pages:CategriesPage}"
-                      Route="CategriesPage"/>
+                      Icon="bxs-heart"
+                      ContentTemplate="{DataTemplate pages:FavoritesPage1}"
+                      Route="FavoritesPage1"/>
         
         <ShellContent Title="Профиль"
-                      Icon="dotnet_bot"
+                      Icon="bxs-user-circle"
                       ContentTemplate="{DataTemplate pages:ProfilePage}"
                       Route="ProfilePage"/>
         
@@ -43,5 +55,8 @@
                       Icon="bx-cross"
                       ContentTemplate="{DataTemplate pages:HelpPage}"
                       Route="HelpPage"/>
+
+
     </TabBar>
+    
 </Shell>
