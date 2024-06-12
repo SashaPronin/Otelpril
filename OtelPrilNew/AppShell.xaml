@@ -13,7 +13,7 @@
     <TabBar>
 
         <ShellContent Title="главная"
-                  Icon="bxs_search_alt-2"
+                  Icon="bxs_search_alt_2"
                   ContentTemplate="{DataTemplate pages:HomePage}" 
                   Route="HomePage"/>
 

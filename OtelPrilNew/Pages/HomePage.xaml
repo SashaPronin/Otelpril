@@ -9,12 +9,15 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center"/>
 
-        <Image
+        <ImageButton
             Source="starone.jpg"
             HeightRequest="100"
             WidthRequest="100" 
             VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
+            HorizontalOptions="Center"
+            Clicked="OnImageButtonClicked">
+
+        </ImageButton>
 
         <Label 
         Text="1 Звёздочный отель!"

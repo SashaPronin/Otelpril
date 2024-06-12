@@ -1,3 +1,5 @@
+using OtelPrilNew.Service;
+
 namespace OtelPrilNew.Pages;
 
 public partial class ProfilePage : ContentPage

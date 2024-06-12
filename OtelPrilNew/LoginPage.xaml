@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OtelPrilNew.LoginPage"
-             Title="NewPage1">
+             Title="Вход">
     <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="300">
         <Label Text="Вход в личный кабинет" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20" WidthRequest="300"/>
         <Entry Text ="" x:Name="LoginNumber" Placeholder="Номер телефона" />
