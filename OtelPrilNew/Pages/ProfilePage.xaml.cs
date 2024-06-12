@@ -6,4 +6,10 @@ public partial class ProfilePage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void LogOutButton_Clicked(object sender, EventArgs e)
+    {
+        SessionService.RemoveUserFromSecureStorage();
+        Navigation.PushAsync(new LoginPage());
+    }
 }
