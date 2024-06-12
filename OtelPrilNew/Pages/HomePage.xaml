@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OtelPrilNew.Pages.HomePage"
+             Title="Главная">
+    <VerticalStackLayout>
+        <Label 
+            Text="Добро пожаловать на Otelpril!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Image
+            Source="starone.jpg"
+            HeightRequest="100"
+            WidthRequest="100" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Label 
+        Text="1 Звёздочный отель!"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center"/>
+
+        <Image
+         Source="startwo.jpg"
+         HeightRequest="100"
+         WidthRequest="90" 
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
+        <Label 
+         Text="2 Звёздочный отель!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
+
+        <Image
+         Source="starfree.jpg"
+         HeightRequest="100"
+         WidthRequest="90" 
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
+        <Label 
+         Text="3 Звёздочный отель!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
+
+        <Image
+         Source="starfour.jpg"
+         HeightRequest="100"
+         WidthRequest="100" 
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
+        <Label 
+         Text="4 Звёздочный отель!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
+
+        <Image
+         Source="starfive.jpg"
+         HeightRequest="100"
+         WidthRequest="100" 
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
+        <Label 
+         Text="5 Звёздочный отель!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

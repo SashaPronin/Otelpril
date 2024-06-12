@@ -1,3 +1,4 @@
+using OtelPrilNew.Pages;
 using OtelPrilNew.Service;
 
 namespace OtelPrilNew;
@@ -11,7 +12,7 @@ public partial class LoginPage : ContentPage
         Task.Run(async () => { user = await SessionService.GetUserFromSecureStorage(); });
         if (user.Length > 0)
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushAsync(new HomePage());
         }
 	}
 
