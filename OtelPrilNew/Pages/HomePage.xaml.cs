@@ -6,7 +6,7 @@ public partial class HomePage : ContentPage
 
     private async void OnImageButtonClicked(object sender, EventArgs e)
     {
-        var nextPage = new NextPage();
+        var nextPage = new NextPage(StarOne);
         await Navigation.PushAsync(nextPage);
     }
 }
