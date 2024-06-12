@@ -8,11 +8,6 @@ public partial class LoginPage : ContentPage
     {
         InitializeComponent();
 
-        if (UserService.UserAuth())
-        {
-            Navigation.PushAsync(new ProfilePage());
-        }
-
     }
 
     private async void ButtonLogin_Clicked(object sender, EventArgs e)
@@ -21,17 +16,7 @@ public partial class LoginPage : ContentPage
         {
             if (LoginPassword.Text.Length > 0)
             {
-                var id = await UserService.Auth(new() { Number = LoginNumber.Text, Password = LoginPassword.Text });
-                if (id > 0)
-                {
-                    await SecureStorage.SetAsync("id", id.ToString());
-                    Navigation.PushAsync(new ProfilePage());
-
-                }
-                else
-                {
-                    DisplayAlert("Ошибка", "Номер или пароль неверный", "ок");
-                }
+                
             }
             else
             {

@@ -15,4 +15,14 @@ public partial class ProfilePage : ContentPage
 		_authService.Logout();
 		Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
     }
+
+    private void ChooseAvatar_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void LogOut_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

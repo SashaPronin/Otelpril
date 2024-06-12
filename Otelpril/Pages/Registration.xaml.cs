@@ -5,11 +5,6 @@ public partial class Registration : ContentPage
 	public Registration()
 	{
         InitializeComponent();
-        if (UserService.UserAuth())
-        {
-            Navigation.PushAsync(new ProfilePage());
-
-        }
     }
 
     private async void ButtonAccReg_Clicked(object sender, EventArgs e)
@@ -22,15 +17,7 @@ public partial class Registration : ContentPage
                 {
                     if (PassReg.Text.Length > 0)
                     {
-                        if (await Service.UserService.RegUser(new() { PhoneNumber = PhoneNumberReg.Text, SecondName = SecondNameReg.Text, UserName = NameReg.Text, Password = PassReg.Text, Basket = { } }))
-                        {
-                            DisplayAlert(Title, "Аккаунт создан", "ok");
-                            Navigation.PushAsync(new ProfilePage());
-                        }
-                        else
-                        {
-                            DisplayAlert("Ошибка", "Номер уже занят", "ок");
-                        }
+                        
                     }
                     else
                     {
