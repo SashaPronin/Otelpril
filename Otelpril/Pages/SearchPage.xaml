@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Otelpril.Pages.SearchPage1"
-             Title="Поиск">
+             Title="главная">
     
     <VerticalStackLayout>
         <Label 
@@ -11,15 +11,68 @@
             HorizontalOptions="Center"/>
         
         <Image
-            Source="starfive.jpg"
-            HeightRequest="300"
+            Source="starone.jpg"
+            HeightRequest="100"
+            WidthRequest="100" 
             VerticalOptions="Center" 
             HorizontalOptions="Center"/>
 
         <Label 
-            Text="5 Звёздочный отель!"
+            Text="1 Звёздочный отель!"
             VerticalOptions="Center" 
             HorizontalOptions="Center"/>
+
+        <Image
+             Source="startwo.jpg"
+             HeightRequest="100"
+             WidthRequest="90" 
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"/>
+
+        <Label 
+         Text="2 Звёздочный отель!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+        
+
+        <Image
+             Source="starfree.jpg"
+             HeightRequest="100"
+             WidthRequest="90" 
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"/>
+
+        <Label 
+         Text="3 Звёздочный отель!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+        
+        
+        <Image
+             Source="starfour.jpg"
+             HeightRequest="100"
+             WidthRequest="100" 
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"/>
+
+        <Label 
+         Text="4 Звёздочный отель!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+        
+        
+        <Image
+             Source="starfive.jpg"
+             HeightRequest="100"
+             WidthRequest="100" 
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"/>
+
+        <Label 
+         Text="5 Звёздочный отель!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
 
 
 

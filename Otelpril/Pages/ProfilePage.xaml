@@ -2,14 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Otelpril.Pages.ProfilePage"
-             Title="ProfilePage">
-    <VerticalStackLayout Padding="25"
-                         Spacing="25">
-        <Label 
-            Text="Профиль!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button Text="Logout"
-                Clicked="Button_Clicked"/>
-    </VerticalStackLayout>
+             Title="Профиль"
+             Background="Green">
+    <Grid>
+
+        <VerticalStackLayout>
+            <HorizontalStackLayout >
+                <StackLayout>
+                    <Image x:Name="avatarImage" Source="default_avatar.png" HeightRequest="150" WidthRequest="150"  Margin="0,10,0,10"/>
+                    <Button Text="Выбрать аватар" Clicked="OnChooseAvatarClicked" HeightRequest="40" WidthRequest="150" Margin="10,0"/>
+                </StackLayout>
+                <StackLayout WidthRequest="220" Margin="0, 20">
+                    <Label FontSize="20" Text="Name" x:Name="UserNamePersonalAccount" Padding="10,10"/>
+                    <Label FontSize="20" Text="SecondName" x:Name="SecondNamePersonalAccount"  Padding="10,10"/>
+                    <Label FontSize="20" Text="Number" x:Name="NumberPersonalAccount"  Padding="10,6"/>
+                    <Button Text="Выйти с аккаунта" x:Name="LogOut" Clicked="LogOut_Clicked" HeightRequest="40" Margin="10,20,0,0" HorizontalOptions="End" />
+                </StackLayout>
+            </HorizontalStackLayout>
+    
+            
+        </VerticalStackLayout>
+
+ 
+    </Grid>
 </ContentPage>

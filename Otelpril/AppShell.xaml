@@ -20,8 +20,10 @@
         Title="Otel-recreation"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />-->
-    
-        <ShellContent Title="Загрузка"
+    <ShellContent Title="1 звездночный отель"
+               ContentTemplate="{DataTemplate pages:StarOne}"
+               Route="StarOne"/>
+    <ShellContent Title="Загрузка"
                    ContentTemplate="{DataTemplate pages:LoadingPage}"
                    Route="LoadingPage"
                    Shell.FlyoutBehavior="Disabled"

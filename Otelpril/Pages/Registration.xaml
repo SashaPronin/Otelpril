@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Otelpril.Pages.Registration"
+             Title="Registration">
+    <HorizontalStackLayout HorizontalOptions="Center" x:Name="test" >
+        <VerticalStackLayout VerticalOptions="Center" WidthRequest="300">
+            <Label Text="Регистрация" HorizontalOptions="Center" FontSize="20"/>
+            <Entry Text ="" Placeholder="Имя" x:Name="NameReg"/>
+            <Entry Text ="" Placeholder="Фамилия" x:Name="SecondNameReg"/>
+            <Entry   Text ="" Placeholder="Номер телефона" x:Name="PhoneNumberReg"/>
+            <Entry Text ="" Placeholder="Пароль" IsPassword ="True" x:Name="PassReg"/>
+            <Button Text="Зарегистрироваться"  x:Name="ButtonAccReg" Clicked="ButtonAccReg_Clicked"/>
+            <Label Text="Есть аккаунт? Войти" HorizontalOptions="Center" Padding="10,10" TextColor="Blue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLabelTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </VerticalStackLayout>
+    </HorizontalStackLayout>
+</ContentPage>

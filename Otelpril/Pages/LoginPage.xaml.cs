@@ -4,17 +4,44 @@ namespace Otelpril.Pages;
 
 public partial class LoginPage : ContentPage
 {
-    private readonly AuthService _authService;
-
-    public LoginPage(AuthService authService)
+    public LoginPage()
     {
         InitializeComponent();
-        _authService = authService;
+
+        if (UserService.UserAuth())
+        {
+            Navigation.PushAsync(new ProfilePage());
+        }
+
     }
 
-    private async void Button_Clicked(object sender, EventArgs e)
+    private async void ButtonLogin_Clicked(object sender, EventArgs e)
     {
-        _authService.Login();
-        await Shell.Current.GoToAsync($"//{nameof(SearchPage1)}");
+        if (LoginNumber.Text.Length == 11)
+        {
+            if (LoginPassword.Text.Length > 0)
+            {
+                var id = await UserService.Auth(new() { Number = LoginNumber.Text, Password = LoginPassword.Text });
+                if (id > 0)
+                {
+                    await SecureStorage.SetAsync("id", id.ToString());
+                    Navigation.PushAsync(new ProfilePage());
+
+                }
+                else
+                {
+                    DisplayAlert("Ошибка", "Номер или пароль неверный", "ок");
+                }
+            }
+            else
+            {
+                DisplayAlert("Ошибка", "Введите пароль", "ок");
+            }
+        }
+        else
+        {
+            DisplayAlert("Ошибка", "Введите номер телефона", "ок");
+        }
+
     }
 }
