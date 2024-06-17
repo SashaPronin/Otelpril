@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OtelPrilNew.Pages.StarOne"
-             Title="StarOne">
+             Title="однозвёздночные отели">
     <VerticalStackLayout>
         <Label 
          Text="Добро пожаловать на Otelpril!"
@@ -14,13 +14,22 @@
          VerticalOptions="Center" 
          HorizontalOptions="Center"/>
 
-        <Image
-         Source="starone.jpg"
-         HeightRequest="100"
-         WidthRequest="100" 
+        <ImageButton
+         Source="starone.jpg" 
+         HeightRequest="170"
+         WidthRequest="170" 
+         Margin="10,0"
+         Clicked="OnImageButtonClicked"
          VerticalOptions="Center" 
          HorizontalOptions="Center"/>
 
-        
+        <Image
+         Source="starfour.jpg" 
+         HeightRequest="170"
+         WidthRequest="170" 
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+
+
     </VerticalStackLayout>
 </ContentPage>

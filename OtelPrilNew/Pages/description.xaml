@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OtelPrilNew.Pages.description"
+             Title="отель">
+    <VerticalStackLayout>
+        <Image
+         Source="starone.jpg" 
+         HeightRequest="270"
+         WidthRequest="270" 
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"/>
+        
+        <Label 
+            Text="Добро пожаловать в наш 1-звездочный отель! Мы рады предложить вам простые номера с минимальным набором удобств. Наши номера оснащены кроватью, столом и стульями, а также общими ванными комнатами. В отеле также есть кафе, где вы сможете заказать закуски и напитки. Пожалуйста, обратите внимание, что у нас нет лифта, и вы будете подниматься на этаж пешком. Мы ценим ваше понимание и надеемся, что ваше пребывание у нас будет комфортным."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+
+        <Button Text="Забронировать" 
+                HeightRequest="50"
+                WidthRequest="300" 
+                Clicked="OnButtonClicked"/>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
